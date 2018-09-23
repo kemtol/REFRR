@@ -101,28 +101,42 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container" id="page--onboarding">
       <div class="jumbotron">
         <p>Dear mkemalw@gmail.com this is an invitation to join my professional job network. I will referr you to some of respectable company to help your career ahead of you. Please for time moment fill your work related curiculum vitae below. This will fun i promise you. </p>
       </div>
       
       <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        <div class="form-group ">
+          <label class="control-label" for="name">Name</label>
+          <input class="form-control" id="name" name="name" type="text"/>
+        </div>
+        <div class="form-group ">
+          <label class="control-label" for="education">Education</label>
+          <input class="form-control" id="text" name="education" type="text"/>
+          <input class="form-control" id="text" name="education" type="text"/>
+        </div>
+        <div class="form-group ">
+          <label class="control-label" for="industry">Industry</label>
+          <input class="form-control" id="text" name="industry" type="text"/>
+        </div>
+        <div class="form-group ">
+          <label class="control-label" for="expertise">Expertise</label>
+          <input class="form-control" id="text" name="expertise" type="text"/>
+        </div>
+        <div class="form-group ">
+          <label class="control-label" for="experience">Experience</label>
+          <input class="form-control" id="text" name="experience" type="text"/>
+          <input class="form-control" id="text" name="experience" type="text"/>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputFile">File input</label>
+          <label for="exampleInputFile">Upload your CV</label>
           <input type="file" id="exampleInputFile">
-          <p class="help-block">Example block-level help text here.</p>
+          <p class="help-block">Only (.pdf) not more than 10MB</p>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox"> Check me out
+            <input type="checkbox"> Hereby i declare all the data that I entered is correct and valid.
           </label>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
@@ -130,7 +144,7 @@
       
     </div>
     
-    <div class="container theme-showcase" role="main">
+    <div class="container theme-showcase hidden" role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
