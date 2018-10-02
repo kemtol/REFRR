@@ -1,0 +1,46 @@
+---
+title: REFRR
+timezone: Asia/Jakarta
+
+name:
+description:
+avatar: 
+footer-links:
+  dribbble: 
+  email: 
+  facebook: 
+  flickr: 
+  github: 
+  instagram: 
+  linkedin: 
+  pinterest: 
+  rss: 
+  twitter: 
+  stackoverflow: 
+  youtube: 
+  googleplus: 
+disqus: 
+google_analytics:
+url:
+baseurl: 
+permalink: "/:title/"
+excerpt_separator: "<!--more-->"
+version: v1.2.0
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+sass:
+  style: expanded
+gems:
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-redirect-from
+- jekyll-seo-tag
+exclude:
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- CNAME
