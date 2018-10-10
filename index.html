@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,418 +31,516 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <style>
-      body {
-        padding-top: 70px;
-        padding-bottom: 30px;
-      }
-
-      .theme-dropdown .dropdown-menu {
-        position: static;
-        display: block;
-        margin-bottom: 20px;
-      }
-
-      .theme-showcase > p > .btn {
-        margin: 5px 0;
-      }
-
-      .theme-showcase .navbar .container {
-        width: auto;
-      }
-      
-      .navbar-inverse{
-        background-image:none;
-        background:#1D4065;
-      }
-      
-      .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.open>a{
-        background-image:none;
-        background:none;
-      }
-      
-      .navbar-nav>li>a{font-size:20px}
-      
-      .navbar-brand{padding:2px;}
-      
-      .navbar-brand > img {height:100%;}
-      
-      .kv-avatar .krajee-default.file-preview-frame,
-      .kv-avatar .krajee-default.file-preview-frame:hover {
-          margin: 0;
-          padding: 0;
-          border: none;
-          box-shadow: none;
-          text-align: center;
-      }
-      .kv-avatar {
-          display: inline-block;
-      }
-      .kv-avatar .file-input {
-          display: table-cell;
-          width: 213px;
-      }
-      .kv-reqd {
-          color: red;
-          font-family: monospace;
-          font-weight: normal;
-      }
-      
-      /* chat */
-      
-      .container{max-width:1170px; margin:auto;}
-      img{ max-width:100%;}
-      .inbox_people {
-        background: #f8f8f8 none repeat scroll 0 0;
-        float: left;
-        overflow: hidden;
-        width: 40%; border-right:1px solid #c4c4c4;
-      }
-      .inbox_msg {
-        border: 1px solid #c4c4c4;
-        clear: both;
-        overflow: hidden;
-      }
-      .top_spac{ margin: 20px 0 0;}
-
-
-      .recent_heading {float: left; width:40%;}
-      .srch_bar {
-        display: inline-block;
-        text-align: right;
-        width: 60%; padding:
-      }
-      .headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
-
-      .recent_heading h4 {
-        color: #05728f;
-        font-size: 21px;
-        margin: auto;
-      }
-      .srch_bar input{ border:1px solid #cdcdcd; border-width:0 0 1px 0; width:80%; padding:2px 0 4px 6px; background:none;}
-      .srch_bar .input-group-addon button {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-        border: medium none;
-        padding: 0;
-        color: #707070;
-        font-size: 18px;
-      }
-      .srch_bar .input-group-addon { margin: 0 0 0 -27px;}
-
-      .chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
-      .chat_ib h5 span{ font-size:13px; float:right;}
-      .chat_ib p{ font-size:14px; color:#989898; margin:auto}
-      .chat_img {
-        float: left;
-        width: 11%;
-        max-width:50px;
-      }
-      .chat_ib {
-        float: left;
-        padding: 0 0 0 15px;
-        width: 88%;
-      }
-
-      .chat_people{ overflow:hidden; clear:both;}
-      .chat_list {
-        border-bottom: 1px solid #c4c4c4;
-        margin: 0;
-        padding: 18px 16px 10px;
-      }
-      .inbox_chat { height: 550px; overflow-y: scroll;}
-
-      .active_chat{ background:#ebebeb;}
-
-      .incoming_msg_img {
-        display: inline-block;
-        width: 6%;
-        max-width: 50px;
-      }
-      .received_msg {
-        display: inline-block;
-        padding: 0 0 0 10px;
-        vertical-align: top;
-        width: 92%;
-       }
-       .received_withd_msg p {
-        background: #ebebeb none repeat scroll 0 0;
-        border-radius: 3px;
-        color: #646464;
-        font-size: 14px;
-        margin: 0;
-        padding: 5px 10px 5px 12px;
-        width: 100%;
-      }
-      .time_date {
-        color: #747474;
-        display: block;
-        font-size: 12px;
-        margin: 8px 0 0;
-      }
-      .received_withd_msg { width: 57%;}
-      .mesgs {
-        float: left;
-        padding: 30px 15px 0 25px;
-        width: 60%;
-      }
-
-       .sent_msg p {
-        background: #05728f none repeat scroll 0 0;
-        border-radius: 3px;
-        font-size: 14px;
-        margin: 0; color:#fff;
-        padding: 5px 10px 5px 12px;
-        width:100%;
-      }
-      .outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
-      .sent_msg {
-        float: right;
-        width: 46%;
-      }
-      .input_msg_write input {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-        border: medium none;
-        color: #4c4c4c;
-        font-size: 15px;
-        min-height: 48px;
-        width: 100%;
-      }
-
-      .type_msg {border-top: 1px solid #c4c4c4;position: relative;}
-      .msg_send_btn {
-        background: #05728f none repeat scroll 0 0;
-        border: medium none;
-        border-radius: 50%;
-        color: #fff;
-        cursor: pointer;
-        font-size: 17px;
-        height: 33px;
-        position: absolute;
-        right: 0;
-        top: 11px;
-        width: 33px;
-      }
-      .messaging { padding: 0 0 50px 0;}
-      .msg_history {
-        height: 516px;
-        overflow-y: auto;
-      }
-      
-      .be-detail-header {
-        border-bottom: 1px solid #edeff2;
-        margin-bottom: 50px;
-      }
-      
-      .be-detail-container{
-        margin: 5rem auto;
-        padding: 5rem 0;
-      }
-      
-      .make-it-full{
-        width:100% !important;
-      }
-      
-      .p-r-0{
-        padding-right:0 !important;
-      }
-      
-      .p-l-0{
-        padding-left:0 !important;
-      }
-      
+        body {
+            padding-top: 70px;
+            padding-bottom: 30px;
+        }
+        
+        .theme-dropdown .dropdown-menu {
+            position: static;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .theme-showcase > p > .btn {
+            margin: 5px 0;
+        }
+        
+        .theme-showcase .navbar .container {
+            width: auto;
+        }
+        
+        .navbar-inverse {
+            background-image: none;
+            background: #1D4065;
+        }
+        
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.open>a {
+            background-image: none;
+            background: none;
+        }
+        
+        .navbar-nav>li>a {
+            font-size: 20px
+        }
+        
+        .navbar-brand {
+            padding: 2px;
+        }
+        
+        .navbar-brand > img {
+            height: 100%;
+        }
+        
+        .kv-avatar .krajee-default.file-preview-frame,
+        .kv-avatar .krajee-default.file-preview-frame:hover {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            text-align: center;
+        }
+        
+        .kv-avatar {
+            display: inline-block;
+        }
+        
+        .kv-avatar .file-input {
+            display: table-cell;
+            width: 213px;
+        }
+        
+        .kv-reqd {
+            color: red;
+            font-family: monospace;
+            font-weight: normal;
+        }
+        /* chat */
+        
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .inbox_people {
+            background: #f8f8f8 none repeat scroll 0 0;
+            float: left;
+            overflow: hidden;
+            width: 40%;
+            border-right: 1px solid #c4c4c4;
+        }
+        
+        .inbox_msg {
+            border: 1px solid #c4c4c4;
+            clear: both;
+            overflow: hidden;
+        }
+        
+        .top_spac {
+            margin: 20px 0 0;
+        }
+        
+        .recent_heading {
+            float: left;
+            width: 40%;
+        }
+        
+        .srch_bar {
+            display: inline-block;
+            text-align: right;
+            width: 60%;
+            padding:
+        }
+        
+        .headind_srch {
+            padding: 10px 29px 10px 20px;
+            overflow: hidden;
+            border-bottom: 1px solid #c4c4c4;
+        }
+        
+        .recent_heading h4 {
+            color: #05728f;
+            font-size: 21px;
+            margin: auto;
+        }
+        
+        .srch_bar input {
+            border: 1px solid #cdcdcd;
+            border-width: 0 0 1px 0;
+            width: 80%;
+            padding: 2px 0 4px 6px;
+            background: none;
+        }
+        
+        .srch_bar .input-group-addon button {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: medium none;
+            padding: 0;
+            color: #707070;
+            font-size: 18px;
+        }
+        
+        .srch_bar .input-group-addon {
+            margin: 0 0 0 -27px;
+        }
+        
+        .chat_ib h5 {
+            font-size: 15px;
+            color: #464646;
+            margin: 0 0 8px 0;
+        }
+        
+        .chat_ib h5 span {
+            font-size: 13px;
+            float: right;
+        }
+        
+        .chat_ib p {
+            font-size: 14px;
+            color: #989898;
+            margin: auto
+        }
+        
+        .chat_img {
+            float: left;
+            width: 11%;
+            max-width: 50px;
+        }
+        
+        .chat_ib {
+            float: left;
+            padding: 0 0 0 15px;
+            width: 88%;
+        }
+        
+        .chat_people {
+            overflow: hidden;
+            clear: both;
+        }
+        
+        .chat_list {
+            border-bottom: 1px solid #c4c4c4;
+            margin: 0;
+            padding: 18px 16px 10px;
+        }
+        
+        .inbox_chat {
+            height: 550px;
+            overflow-y: scroll;
+        }
+        
+        .active_chat {
+            background: #ebebeb;
+        }
+        
+        .incoming_msg_img {
+            display: inline-block;
+            width: 6%;
+            max-width: 50px;
+        }
+        
+        .received_msg {
+            display: inline-block;
+            padding: 0 0 0 10px;
+            vertical-align: top;
+            width: 92%;
+        }
+        
+        .received_withd_msg p {
+            background: #ebebeb none repeat scroll 0 0;
+            border-radius: 3px;
+            color: #646464;
+            font-size: 14px;
+            margin: 0;
+            padding: 5px 10px 5px 12px;
+            width: 100%;
+        }
+        
+        .time_date {
+            color: #747474;
+            display: block;
+            font-size: 12px;
+            margin: 8px 0 0;
+        }
+        
+        .received_withd_msg {
+            width: 57%;
+        }
+        
+        .mesgs {
+            float: left;
+            padding: 30px 15px 0 25px;
+            width: 60%;
+        }
+        
+        .sent_msg p {
+            background: #05728f none repeat scroll 0 0;
+            border-radius: 3px;
+            font-size: 14px;
+            margin: 0;
+            color: #fff;
+            padding: 5px 10px 5px 12px;
+            width: 100%;
+        }
+        
+        .outgoing_msg {
+            overflow: hidden;
+            margin: 26px 0 26px;
+        }
+        
+        .sent_msg {
+            float: right;
+            width: 46%;
+        }
+        
+        .input_msg_write input {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+            border: medium none;
+            color: #4c4c4c;
+            font-size: 15px;
+            min-height: 48px;
+            width: 100%;
+        }
+        
+        .type_msg {
+            border-top: 1px solid #c4c4c4;
+            position: relative;
+        }
+        
+        .msg_send_btn {
+            background: #05728f none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            font-size: 17px;
+            height: 33px;
+            position: absolute;
+            right: 0;
+            top: 11px;
+            width: 33px;
+        }
+        
+        .messaging {
+            padding: 0 0 50px 0;
+        }
+        
+        .msg_history {
+            height: 516px;
+            overflow-y: auto;
+        }
+        
+        .be-detail-header {
+            border-bottom: 1px solid #edeff2;
+            margin-bottom: 50px;
+        }
+        
+        .be-detail-container {
+            margin: 5rem auto;
+            padding: 5rem 0;
+        }
+        
+        .make-it-full {
+            width: 100% !important;
+        }
+        
+        .p-r-0 {
+            padding-right: 0 !important;
+        }
+        
+        .p-l-0 {
+            padding-left: 0 !important;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img class="img-fluid" src="data:image/png;base64,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" alt="REFRR" /></a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="img-fluid" src="data:image/png;base64,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" alt="REFRR" /></a>
+            </div>
+            <nav class="navbar-collapse collapse" id="bs-navbar" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="far fa-comments"></i></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navbar-collapse collapse" id="bs-navbar" aria-expanded="false" style="height: 1px;">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="far fa-comments"></i></a></li>
-          </ul>
-        </nav>
-        </div><!--/.nav-collapse -->
-      </div>
+        <!--/.nav-collapse -->
+        </div>
     </nav>
-    
+
     <div class="container be-detail-container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-          <br>
-          <img src="https://cdn2.iconfinder.com/data/icons/luchesa-part-3/128/SMS-512.png" class="img-responsive" style="width:200px; height:200px;margin:0 auto;">
-          <br>
-          <h1 class="text-center">Verify your mobile number</h1>
-          <br>
-          <p class="lead" style="align:center"></p>
-          <p> Thanks for giving your details. An OTP has been sent to your Mobile Number. Please enter the 4 digit OTP below for Successful Registration</p>  <p></p>
-          <br>
-          <form method="post" id="veryfyotp" action="">
-            <div class="row">                    
-            <div class="form-group col-xs-9">
-              <span style="color:red;"></span>
-              <input type="text" class="form-control" name="otp" placeholder="Enter your OTP number" required="">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                <br>
+                <img src="data:image/png;base64,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" class="img-responsive" style="width:200px; height:200px;margin:0 auto;">
+                <br>
+                <h1 class="text-center">Verify your mobile number</h1>
+                <br>
+                <p class="lead" style="align:center"></p>
+                <p> Thanks for giving your details. An OTP has been sent to your Mobile Number. Please enter the 4 digit OTP below for Successful Registration</p>
+                <p></p>
+                <br>
+                <form method="post" id="veryfyotp" action="">
+                    <div class="row">
+                        <div class="form-group col-xs-9">
+                            <span style="color:red;"></span>
+                            <input type="text" class="form-control" name="otp" placeholder="Enter your OTP number" required="">
+                        </div>
+                        <button type="submit" class="btn btn-success  col-xs-3">Verify</button>
+                    </div>
+                </form>
+                <br>
+                <br>
             </div>
-            <button type="submit" class="btn btn-success  col-xs-3">Verify</button>
-            </div>
-          </form>
-          <br>
-          <br>
         </div>
-      </div>        
     </div>
-    
+
     <hr/>
-    
+
     <div class="container be-detail-container" id="page--candidates--login">
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <h1 class="text-center">One step auth</h1>
-            <p class="text-center">using mobile number</p>
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Mobile Number</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="eg: 0838xxxxxxxx">
-              </div>
-              <div class="form-group hidden">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <div class="form-group hidden">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Remember Me
-                </label>
-              </div>
-              <button type="submit" class="btn btn-success">Submit</button>
-            </form>
-          </div>
-      </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="text-center">One step auth</h1>
+                <p class="text-center">using mobile number</p>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Mobile Number</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="eg: 0838xxxxxxxx">
+                    </div>
+                    <div class="form-group hidden">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group hidden">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" id="exampleInputFile">
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember Me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
-    
+
     <hr/>
 
     <div class="container" id="page--candidates--onboarding">
-      <div class="jumbotron">
-        <p>Dear <strong>mkemalw@gmail.com</strong> this is an invitation to join my professional job network. I will referr you to some of respectable company to help your career ahead of you. Please for time moment fill your work related curiculum vitae below. This will fun i promise you. </p>
-      </div>
-      
+        <div class="jumbotron">
+            <p>Dear <strong>mkemalw@gmail.com</strong> this is an invitation to join my professional job network. I will referr you to some of respectable company to help your career ahead of you. Please for time moment fill your work related curiculum vitae below. This will fun i promise you. </p>
+        </div>
+
         <div class="row">
-          <div class="col-sm-4 text-center">
-              <div class="kv-avatar">
-                  <div class="file-loading">
-                      <input id="avatar-1" name="avatar-1" type="file" required>
-                  </div>
-              </div>
-              <div class="kv-avatar-hint"><small>Select file < 1500 KB</small></div>
-          </div>
-        </div>
-          
-        <div class="form-group ">
-          <label class="control-label" for="name">Name</label>
-          <input class="form-control" id="name" name="name" type="text"/>
-        </div>
-          
-        <form class="form-inline">
-          <div class="form-group ">
-            <label class="control-label" for="education">Education</label>
-          </div>  
-          <br/>
-          <div class="form-group"  style="width:100%">
-            <select class="form-control" id="sel1"  style="width:20%">
-              <option>SMA</option>
-              <option>S1</option>
-              <option>S2</option>
-              <option>S3</option>
-            </select>      
-            <input class="form-control" id="text" name="e1" type="text" style="width:50%" />
-            <input class="form-control" id="text" name="e2" type="text" style="width:20%" />
-          </div>
-          <br/>
-          <div class="form-group"  style="width:100%">
-            <select class="form-control" id="sel1" style="width:20%">
-              <option>SMA</option>
-              <option>S1</option>
-              <option>S2</option>
-              <option>S3</option>
-            </select>      
-            <input class="form-control" id="text" name="e1" type="text" style="width:50%" />
-            <input class="form-control" id="text" name="e2" type="text" style="width:20%" />
-          </div>  
-        </form>
-        <div class="form-group text-right">
-          <i class="fas fa-plus-circle"></i>
+            <div class="col-sm-4 text-center">
+                <div class="kv-avatar">
+                    <div class="file-loading">
+                        <input id="avatar-1" name="avatar-1" type="file" required>
+                    </div>
+                </div>
+                <div class="kv-avatar-hint"><small>Select file < 1500 KB</small></div>
+            </div>
         </div>
 
         <div class="form-group ">
-          <label class="control-label" for="industry">Industry</label>
-          <input class="form-control" id="text" name="industry" type="text"/>
+            <label class="control-label" for="name">Name</label>
+            <input class="form-control" id="name" name="name" type="text" />
         </div>
-          
-        <div class="form-group ">
-          <label class="control-label" for="expertise">Expertise</label>
-          <input class="form-control" id="text" name="expertise" type="text"/>
-        </div>
-          
+
         <form class="form-inline">
-          <div class="form-group ">
-            <label class="control-label" for="experience">Experience</label>
-          </div>
-          <br/>
-          <div class="form-group" style="width:100%" />
+            <div class="form-group ">
+                <label class="control-label" for="education">Education</label>
+            </div>
+            <br/>
+            <div class="form-group" style="width:100%">
+                <select class="form-control" id="sel1" style="width:20%">
+                    <option>SMA</option>
+                    <option>S1</option>
+                    <option>S2</option>
+                    <option>S3</option>
+                </select>
+                <input class="form-control" id="text" name="e1" type="text" style="width:50%" />
+                <input class="form-control" id="text" name="e2" type="text" style="width:20%" />
+            </div>
+            <br/>
+            <div class="form-group" style="width:100%">
+                <select class="form-control" id="sel1" style="width:20%">
+                    <option>SMA</option>
+                    <option>S1</option>
+                    <option>S2</option>
+                    <option>S3</option>
+                </select>
+                <input class="form-control" id="text" name="e1" type="text" style="width:50%" />
+                <input class="form-control" id="text" name="e2" type="text" style="width:20%" />
+            </div>
+        </form>
+        <div class="form-group text-right">
+            <i class="fas fa-plus-circle"></i>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="industry">Industry</label>
+            <input class="form-control" id="text" name="industry" type="text" />
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label" for="expertise">Expertise</label>
+            <input class="form-control" id="text" name="expertise" type="text" />
+        </div>
+
+        <form class="form-inline">
+            <div class="form-group ">
+                <label class="control-label" for="experience">Experience</label>
+            </div>
+            <br/>
+            <div class="form-group" style="width:100%" />
             <input class="form-control" id="text" name="experience" type="text" style="width:20%" />
             <input class="form-control" id="text" name="experience" type="text" style="width:30%" />
             <input class="form-control" id="text" name="experience" type="text" style="width:30%" />
-          </div>
-          <br/>
-          <div class="form-group"  style="width:100%">
-            <input class="form-control" id="text" name="experience" type="text"  style="width:20%"/>
-            <input class="form-control" id="text" name="experience" type="text"  style="width:30%"/>
-            <input class="form-control" id="text" name="experience" type="text"  style="width:30%"/>
-          </div>
-        </form>
-        <div class="form-group text-right">
-          <i class="fas fa-plus-circle"></i>
-        </div>
-          
-        <div class="form-group">
-          <label for="exampleInputFile">Upload your CV</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Only (.pdf) not more than 10MB</p>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Hereby i declare all the data that I entered is correct and valid.
-          </label>
-        </div>
-        <button type="submit" class="btn btn-success">Submit</button>
-        
     </div>
-    
+    <br/>
+    <div class="form-group" style="width:100%">
+        <input class="form-control" id="text" name="experience" type="text" style="width:20%" />
+        <input class="form-control" id="text" name="experience" type="text" style="width:30%" />
+        <input class="form-control" id="text" name="experience" type="text" style="width:30%" />
+    </div>
+    </form>
+    <div class="form-group text-right">
+        <i class="fas fa-plus-circle"></i>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputFile">Upload your CV</label>
+        <input type="file" id="exampleInputFile">
+        <p class="help-block">Only (.pdf) not more than 10MB</p>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Hereby i declare all the data that I entered is correct and valid.
+        </label>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+    </div>
+
     <hr />
-    
+
     <div class="container" id="page--cadidates--cover--letter">
-      <div class="jumbotron">
-        <p>Dear <strong>Mustafa Kemal</strong> on behalf of <strong>PT PERTAMINA PERSERO</strong> we need your cover letter to be assigne to this position: <strong>MANAGEMENT TRAINEE</strong></p>
-      </div>  
-      
+        <div class="jumbotron">
+            <p>Dear <strong>Mustafa Kemal</strong> on behalf of <strong>PT PERTAMINA PERSERO</strong> we need your cover letter to be assigne to this position: <strong>MANAGEMENT TRAINEE</strong></p>
+        </div>
+
+        <h2>OFFSHORE DRILLER<h2>
+        <h3>PE PERTAMINA PERSERO</h3>
+
+      <h4>OVERVIEW</h4>
+      <p>Crews on oil drilling rigs operate in drilling crews, which are teams of people with specified tasks and responsibilities. ... This is the same whether the rig is on land or offshore. When everyone is working well together on their team, the drilling operation gets the job done safely and efficiently.</p>
+
+        <h4></h4>
+        <p></p>
+
       <form method="post">
         <div class="form-group ">
           <label class="control-label " for="coverletter">Cover Letter</label>
@@ -455,398 +553,401 @@
         </div>
         <button class="btn btn-success " name="submit" type="submit">Submit</button>
       </form>
-      
+
     </div>
-    
+
     <hr />
-    
-      <h2>FULL CHAT </h2>  
-      
-    <div class="container-fluid p-r-0 p-l-0">
-        <div class="messaging">
-            <div class="inbox_msg">
-                <div class="inbox_people">
-                    <div class="headind_srch">
-                        <div class="recent_heading">
-                            <h4>Recent</h4>
-                        </div>
-                        <div class="srch_bar hidden">
-                            <div class="stylish-input-group">
-                                <input type="text" class="search-bar" placeholder="Search">
-                                <span class="input-group-addon">
+
+    <h2>FULL CHAT </h2>
+
+        <div class="container-fluid p-r-0 p-l-0">
+            <div class="messaging">
+                <div class="inbox_msg">
+                    <div class="inbox_people">
+                        <div class="headind_srch">
+                            <div class="recent_heading">
+                                <h4>Recent</h4>
+                            </div>
+                            <div class="srch_bar hidden">
+                                <div class="stylish-input-group">
+                                    <input type="text" class="search-bar" placeholder="Search">
+                                    <span class="input-group-addon">
                     <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
                     </span> </div>
+                            </div>
+                        </div>
+                        <div class="inbox_chat">
+                            <div class="chat_list active_chat">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="inbox_chat">
-                        <div class="chat_list active_chat">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                    <div class="mesgs">
+                        <div class="msg_history">
+                            <div class="incoming_msg">
+                                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="received_msg">
+                                    <div class="received_withd_msg">
+                                        <p>Test which is a new approach to have all solutions
+                                        </p>
+                                        <span class="time_date"> 11:01 AM    |    June 9</span></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mesgs">
-                    <div class="msg_history">
-                        <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
+                            <div class="outgoing_msg">
+                                <div class="sent_msg">
                                     <p>Test which is a new approach to have all solutions
                                     </p>
-                                    <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                                    <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+                            </div>
+                            <div class="incoming_msg">
+                                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="received_msg">
+                                    <div class="received_withd_msg">
+                                        <p>Test, which is a new approach to have</p>
+                                        <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                                </div>
+                            </div>
+                            <div class="outgoing_msg">
+                                <div class="sent_msg">
+                                    <p>Apollo University, Delhi, India Test</p>
+                                    <span class="time_date"> 11:01 AM    |    Today</span> </div>
+                            </div>
+                            <div class="incoming_msg">
+                                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="received_msg">
+                                    <div class="received_withd_msg">
+                                        <p>We work directly with our designers and suppliers, and sell direct to you, which means quality, exclusive products, at a price anyone can afford.</p>
+                                        <span class="time_date"> 11:01 AM    |    Today</span></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="outgoing_msg">
-                            <div class="sent_msg">
-                                <p>Test which is a new approach to have all solutions
-                                </p>
-                                <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-                        </div>
-                        <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                    <p>Test, which is a new approach to have</p>
-                                    <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                        <div class="type_msg">
+                            <div class="input_msg_write">
+                                <input type="text" class="write_msg" placeholder="Type a message" />
+                                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                             </div>
-                        </div>
-                        <div class="outgoing_msg">
-                            <div class="sent_msg">
-                                <p>Apollo University, Delhi, India Test</p>
-                                <span class="time_date"> 11:01 AM    |    Today</span> </div>
-                        </div>
-                        <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                    <p>We work directly with our designers and suppliers, and sell direct to you, which means quality, exclusive products, at a price anyone can afford.</p>
-                                    <span class="time_date"> 11:01 AM    |    Today</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="type_msg">
-                        <div class="input_msg_write">
-                            <input type="text" class="write_msg" placeholder="Type a message" />
-                            <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <hr />
-      
-      <h2>CHAT LIST MOBILE</h2>
-      
-      <div class="container-fluid p-r-0 p-l-0">
-        <div class="messaging">
-            <div class="inbox_msg">
-                <div class="inbox_people make-it-full">
-                    <div class="headind_srch">
-                        <div class="recent_heading">
-                            <h4>Recent</h4>
-                        </div>
-                        <div class="srch_bar hidden">
-                            <div class="stylish-input-group">
-                                <input type="text" class="search-bar" placeholder="Search">
-                                <span class="input-group-addon">
+
+        <hr />
+
+        <h2>CHAT LIST MOBILE</h2>
+
+        <div class="container-fluid p-r-0 p-l-0">
+            <div class="messaging">
+                <div class="inbox_msg">
+                    <div class="inbox_people make-it-full">
+                        <div class="headind_srch">
+                            <div class="recent_heading">
+                                <h4>Recent</h4>
+                            </div>
+                            <div class="srch_bar hidden">
+                                <div class="stylish-input-group">
+                                    <input type="text" class="search-bar" placeholder="Search">
+                                    <span class="input-group-addon">
                     <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
                     </span> </div>
+                            </div>
+                        </div>
+                        <div class="inbox_chat">
+                            <div class="chat_list active_chat">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                                        <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="inbox_chat">
-                        <div class="chat_list active_chat">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                                    <p>Test, which is a new approach to have all solutions astrology under one roof.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-                
             </div>
         </div>
-    </div>
-      
-      <hr/>
-      
-      <h2>CHAT DETAIL MOBILE</h2>
-      
-      <div class="container-fluid p-r-0 p-l-0">
-        <div class="messaging">
-            <div class="inbox_msg">
-                
-                <div class="mesgs make-it-full">
-                    <div class="msg_history">
-                        <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
+
+        <hr/>
+
+        <h2>CHAT DETAIL MOBILE</h2>
+
+        <div class="container-fluid p-r-0 p-l-0">
+            <div class="messaging">
+                <div class="inbox_msg">
+
+                    <div class="mesgs make-it-full">
+                        <div class="msg_history">
+                            <div class="incoming_msg">
+                                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="received_msg">
+                                    <div class="received_withd_msg">
+                                        <p>Test which is a new approach to have all solutions
+                                        </p>
+                                        <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                                </div>
+                            </div>
+                            <div class="outgoing_msg">
+                                <div class="sent_msg">
                                     <p>Test which is a new approach to have all solutions
                                     </p>
-                                    <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                                    <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+                            </div>
+                            <div class="incoming_msg">
+                                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="received_msg">
+                                    <div class="received_withd_msg">
+                                        <p>Test, which is a new approach to have</p>
+                                        <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                                </div>
+                            </div>
+                            <div class="outgoing_msg">
+                                <div class="sent_msg">
+                                    <p>Apollo University, Delhi, India Test</p>
+                                    <span class="time_date"> 11:01 AM    |    Today</span> </div>
+                            </div>
+                            <div class="incoming_msg">
+                                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="received_msg">
+                                    <div class="received_withd_msg">
+                                        <p>We work directly with our designers and suppliers, and sell direct to you, which means quality, exclusive products, at a price anyone can afford.</p>
+                                        <span class="time_date"> 11:01 AM    |    Today</span></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="outgoing_msg">
-                            <div class="sent_msg">
-                                <p>Test which is a new approach to have all solutions
-                                </p>
-                                <span class="time_date"> 11:01 AM    |    June 9</span> </div>
-                        </div>
-                        <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                    <p>Test, which is a new approach to have</p>
-                                    <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                        <div class="type_msg">
+                            <div class="input_msg_write">
+                                <input type="text" class="write_msg" placeholder="Type a message">
+                                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                             </div>
-                        </div>
-                        <div class="outgoing_msg">
-                            <div class="sent_msg">
-                                <p>Apollo University, Delhi, India Test</p>
-                                <span class="time_date"> 11:01 AM    |    Today</span> </div>
-                        </div>
-                        <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                            <div class="received_msg">
-                                <div class="received_withd_msg">
-                                    <p>We work directly with our designers and suppliers, and sell direct to you, which means quality, exclusive products, at a price anyone can afford.</p>
-                                    <span class="time_date"> 11:01 AM    |    Today</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="type_msg">
-                        <div class="input_msg_write">
-                            <input type="text" class="write_msg" placeholder="Type a message">
-                            <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-      
-    <hr />
 
-    <h2>JOB LIST MOBILE</h2>
-    <div class="container-fluid p-r-0 p-l-0">
-        <div class="messaging">
-            <div class="inbox_msg">
-                <div class="inbox_people make-it-full">
-                    <div class="inbox_chat">
-                        <div class="chat_list active_chat">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
-                                    <p>Management Trainee</p>
+        <hr />
+
+        <h2>JOB LIST MOBILE</h2>
+        <div class="container-fluid p-r-0 p-l-0">
+            <div class="messaging">
+                <div class="inbox_msg">
+                    <div class="inbox_people make-it-full">
+                        <div class="inbox_chat">
+                            <div class="chat_list active_chat">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
+                                        <p>Management Trainee</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
-                                    <p>Management Trainee</p>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
+                                        <p>Management Trainee</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
-                                    <p>Management Trainee</p>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
+                                        <p>Management Trainee</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
-                                    <p>Management Trainee</p>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
+                                        <p>Management Trainee</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
-                                    <p>Management Trainee</p>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
+                                        <p>Management Trainee</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
-                                    <p>Management Trainee</p>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
+                                        <p>Management Trainee</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="chat_list">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
-                                    <p>Management Trainee</p>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"> <img src="https://2.bp.blogspot.com/-SgBAkNhTq9k/WBlP_5ewh0I/AAAAAAAAAL4/kDpsamjzMhMJeDRbJlbjTqkv9RUSxbPcQCLcB/s1600/LOGO%2BPERTAMINA.jpg" alt="sunil"> </div>
+                                    <div class="chat_ib">
+                                        <h5>PT COMPANY NAME <span class="chat_date">Dec 25</span></h5>
+                                        <p>Management Trainee</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>
-      var btnCust = '<button type="button" class="btn btn-secondary" title="Add picture tags" ' + 
-          'onclick="alert(\'Call your custom code here.\')">' +
-          '<i class="glyphicon glyphicon-tag"></i>' +
-          '</button>'; 
-      $("#avatar-1").fileinput({
-          overwriteInitial: true,
-          maxFileSize: 1500,
-          showClose: false,
-          showCaption: false,
-          browseLabel: '',
-          removeLabel: '',
-          browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>',
-          removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
-          removeTitle: 'Cancel or reset changes',
-          elErrorContainer: '#kv-avatar-errors-1',
-          msgErrorClass: 'alert alert-block alert-danger',
-          defaultPreviewContent: '<img src="data:image/jpeg;base64,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" alt="Your Avatar">',
-          layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
-          allowedFileExtensions: ["jpg", "png", "gif"]
-      });
-    </script>
-  </body>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
+            var btnCust = '<button type="button" class="btn btn-secondary" title="Add picture tags" ' +
+                'onclick="alert(\'Call your custom code here.\')">' +
+                '<i class="glyphicon glyphicon-tag"></i>' +
+                '</button>';
+            $("#avatar-1").fileinput({
+                overwriteInitial: true,
+                maxFileSize: 1500,
+                showClose: false,
+                showCaption: false,
+                browseLabel: '',
+                removeLabel: '',
+                browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>',
+                removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
+                removeTitle: 'Cancel or reset changes',
+                elErrorContainer: '#kv-avatar-errors-1',
+                msgErrorClass: 'alert alert-block alert-danger',
+                defaultPreviewContent: '<img src="data:image/jpeg;base64,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" alt="Your Avatar">',
+                layoutTemplates: {
+                    main2: '{preview} ' + btnCust + ' {remove} {browse}'
+                },
+                allowedFileExtensions: ["jpg", "png", "gif"]
+            });
+        </script>
+</body>
+
 </html>
